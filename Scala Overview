@@ -1,8 +1,19 @@
 Introduction to Scala
 
-Scala is developed by Martin Odersky and released in 2003. It integrates features of object oriented and functional languages.
+Scala is developed by Martin Odersky and released in 2003. It integrates features of object oriented 
+and functional languages.
 Scala --> means scalable language. It is compiled and runs on JVM.
 Scala is pure object oriented --> which means every value is treated as object.
 Scala is functional --> every function is a value. Since every value is an object, every function is an object.
-Scala is statically typed --> means type of the variable is known at compile time. It doesn’t expect to provide redundant type information.
-Static typed vs Dynamic typed: In case of static typed languages, type of the variable is known at compile time. For dynamic typing, type of the variable is interpreted at runtime.
+Scala is statically typed --> means type of the variable is known at compile time. It doesn’t expect 
+to provide redundant type information.
+Static typed vs Dynamic typed: In case of static typed languages, type of the variable is known at compile time. 
+For dynamic typing, type of the variable is interpreted at runtime.
+
+Scala runs on JVM --> Scala code compiles into java byte code which is executed by jvm.
+Both java and scala have a common runtime platform. 
+
+scalac --> to compile scala code
+scala --> to run the byte code
+
+scalac and scala commands are same as javac and java
