@@ -78,21 +78,21 @@ i.e HelloWorld. Now compile and run the code as below:
    Hello, World!
 
  Note:
- •	Case sensitive
+ •Case sensitive
  
- •	Class Names: For all class names, first letter must be in upper case. 
-   If class name constitutes several words, then each inner word’s first letter must be in upper case.
-   Example: MyFirstScalaClass
+ •Class Names: For all class names, first letter must be in upper case. 
+  If class name constitutes several words, then each inner word’s first letter must be in upper case.
+  Example: MyFirstScalaClass
    
- •	Method Names: All the method names must start with lover case letter. If the method name constitutes several words,
-   then each inner word’s first letter must be in upper case.
-   Example: def myMethodName
+ •Method Names: All the method names must start with lover case letter. If the method name constitutes several words,
+  then each inner word’s first letter must be in upper case.
+  Example: def myMethodName
    
- •	Program File Name: The program file name should match the object name. When saving the file append the 
-   extension .scala to the end of the file name. 
-   Example:  if object name is HelloWorld then the file should be saved as HelloWorld.scala
+ •Program File Name: The program file name should match the object name. When saving the file append the 
+  extension .scala to the end of the file name. 
+  Example:  if object name is HelloWorld then the file should be saved as HelloWorld.scala
    
- •	def main(args:Array[String]) -  It is the mandatory part of every scala program form which processing starts.
+ •def main(args:Array[String]) -  It is the mandatory part of every scala program form which processing starts.
    
    
 
