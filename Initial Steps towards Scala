@@ -127,7 +127,7 @@ Scala supports both single line comments (strating with //) and also multi line 
 
 Newline characters: A semicolon at the end of the statement is optional. It is essential if 
 we intend to write multiple statements on a single line.
-Example: val s=”hello”; println(s)
+Example: val s="hello"; println(s)
 
 Scala Packages: Package is named module of code.
 Importing a package -> import scala.xml._ 
