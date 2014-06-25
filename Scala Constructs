@@ -1,0 +1,20 @@
+SCALA VARIABLES:
+
+Variables are memory locations reserverd to store values of that particular data type of the variable.
+
+Declaration:
+
+var myVar : String = "hello"
+
+Here myVar is declared using the keyword var which means the variable is mutable (i.e it can change the value).
+
+val myVal : String = "padma"
+
+Here myVal is declared using the keyword val which means it cannot be changed i.e immutable.
+
+Variable Data Type:
+Unlike Java, the data type of the variable is specified after the variable name and before equal sign.
+Syntax: var or val VariableName : DataType [=Initial value]
+
+variable declaration in Java: int x=10;
+variable declaration in Scala: var x :int =10;
