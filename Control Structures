@@ -1,0 +1,57 @@
+IF...ELSE
+Any programming language provides if..else construct for decision making.
+ 
+if statement:
+if(Boolean_expression)
+{
+   // Statements will execute if the Boolean expression is true
+}
+Ex:
+object Test {
+   def main(args: Array[String]) {
+      var x = 10;
+
+      if( x < 20 ){
+         println("This is if statement");
+      }
+   }
+}
+
+if..else statement:
+if(Boolean_expression){
+   //Executes when the Boolean expression is true
+}else{
+   //Executes when the Boolean expression is false
+}
+
+if..else if..else statement:
+if(Boolean_expression 1){
+   //Executes when the Boolean expression 1 is true
+}else if(Boolean_expression 2){
+   //Executes when the Boolean expression 2 is true
+}else if(Boolean_expression 3){
+   //Executes when the Boolean expression 3 is true
+}else {
+   //Executes when the none of the above condition is true.
+}
+
+Nested if..else statement: Having if or if..else statements inside another if or else if.
+if(Boolean_expression 1){
+   //Executes when the Boolean expression 1 is true
+   if(Boolean_expression 2){
+      //Executes when the Boolean expression 2 is true
+   }
+}
+
+LOOP TYPES:
+Loop: executes statements desired number of times. performs repetitive tasks.
+Scala has support for following loops: while, do..while, for
+
+
+
+
+
+
+
+
+
