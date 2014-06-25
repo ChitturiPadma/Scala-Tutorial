@@ -76,6 +76,45 @@ Ex:
          a = a + 1;
       }while( a < 20 )
 
+For Loop:
+
+for(i <- 1 to 10) {
+    println("i is " + i);
+}
+
+The above for loop iterates 10 times and for each iteration and for each iteration assigns the val i the next number in the range.
+i <- construct is called a generator. In each iteration i is initalized with a value.
+1 to 10 is called Range type. It returns a range containing the values from 1 to 10.
+
+to vs until
+
+for(i <- 1 until 10) {
+    println("i is " + i);
+}
+
+The above for loop iterated 9 times excluding the upper boundary 10.
+
+Iterating Collections and Arrays:
+Array or collections can be iterated using the for loop as-
+
+var myArray : Array[String] = new Array[String](10);
+
+
+for(i <- 0 until myArray.length){
+    myArray(i) = "value is: " + i;
+}
+
+for(value : String <- myArray ) {
+    println(value);
+}
+
+In the above for loops, the first for loop intitalizes each element in the array to the text "value is: " with index appended.
+The third for loop interates the array using the generator <-. In each iteration, next element in the array is assigned to value
+and finally printed to the console.
+
+Multiple For loop Filters:
+
+
 
 
 
