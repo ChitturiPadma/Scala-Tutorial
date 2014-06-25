@@ -93,6 +93,27 @@ i.e HelloWorld. Now compile and run the code as below:
   Example:  if object name is HelloWorld then the file should be saved as HelloWorld.scala
    
  •def main(args:Array[String]) -  It is the mandatory part of every scala program form which processing starts.
+ 
+ Scala Identifiers
+As in all programming languages, keywords cannot be used as identifiers. Identifiers are case sensitive. 
+Four types of identifiers are supported in scala:
+
+•Alpha numeric identifiers:  start with alphabet or underscore. 
+‘$’ special character shouldn’t be part of the identifier. Ex: age, name _hello
+
+•Operator identifiers: These identifiers consist of operators as characters. 
+These operators are printable ascii characters like +,:,?,~ or #.
+Example: +, ++, <?>, :>
+
+The scala compiler internally turns the operator identifiers into legal java identifiers with embedded $ character.
+For example the operator :-> would be represented internally as $colon$minus$greater
+
+•Mixed identifiers: Consists of alphanumeric identifier, followed by an underscore and also an operator identifier.
+Example: unary_+, myvar_=
+
+•Literal idnetifiers: It is an arbitrary string enclosed in back ticks as ``
+Example: `x`, `<clint>`, `yield`
+
    
    
 
