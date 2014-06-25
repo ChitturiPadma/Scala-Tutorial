@@ -1,4 +1,4 @@
-Introduction to Scala
+INTRODUCTION TO SCALA
 
 Scala is developed by Martin Odersky and released in 2003. It integrates features of object oriented 
 and functional languages.
@@ -18,7 +18,7 @@ scala --> to run the byte code
 
 scalac and scala commands are same as javac and java
 
-Steps to install/run scala:
+STEPS TO INSTALL/RUN SCALA:
 
 On Windows:
 
@@ -38,3 +38,66 @@ On Linux:
 4. During the installation process, accept the license agreement, specify the path where scala has to be installed
    (eg: /usr/local/share).
 5. Finally, scala -version at the command prompt displays the version of scala that is installed.
+
+
+BASIC SYNTAX:
+   Scala program is a collection of objects which communicate with each other via invoking  each other's methods.
+   object -> has state and behavior
+   class -> template/blueprint  for the object of it's type.
+   Methods -> Method is basically a behavior. Within the body of the method, logic is written, data is manipulated and 
+              actions are executed.
+   Fields -> These are the instant variables defined in the class. These are unique for each object and 
+             and determine the state of the object.
+   
+   First scala program in interactive mode:
+   C:\>scala
+   Welcome to Scala version 2.11.1 (Java HotSpot(TM) 64-Bit Server VM, Java 1.7.0).
+   Type in expressions to have them evaluated.
+   Type :help for more information.
+   
+   scala>
+   scala> println("Hello..!!!")
+   Hello..!!!
+   
+   Simple script mode program:
+ 
+   object HelloWorld {
+   /* This is my first java program.  
+    * This will print 'Hello World' as the output
+    */
+   def main(args: Array[String]) {
+      println("Hello, world!") // prints Hello World
+   }
+ }
+
+Save the above code in a notepad with .scala extension. Remember that the file name should be same as the object name
+i.e HelloWorld. Now compile and run the code as below:
+   
+   D:\ScalaPrograms> scalac HelloWorld.scala // generates HelloWorld.class file which contains byte code
+   D:\ScalaPrograms> scala HelloWorld
+   Hello, World!
+
+ Note:
+ •	Case sensitive
+ 
+ •	Class Names: For all class names, first letter must be in upper case. 
+   If class name constitutes several words, then each inner word’s first letter must be in upper case.
+   Example: MyFirstScalaClass
+   
+ •	Method Names: All the method names must start with lover case letter. If the method name constitutes several words,
+   then each inner word’s first letter must be in upper case.
+   Example: def myMethodName
+   
+ •	Program File Name: The program file name should match the object name. When saving the file append the 
+   extension .scala to the end of the file name. 
+   Example:  if object name is HelloWorld then the file should be saved as HelloWorld.scala
+   
+ •	def main(args:Array[String]) -  It is the mandatory part of every scala program form which processing starts.
+   
+   
+
+   
+   
+   
+   
+   
