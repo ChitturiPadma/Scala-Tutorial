@@ -51,15 +51,73 @@ from the method, they will be accessible outside the method.
 Local variables can be both mutable/immutable.
 
 SCALA ACCESS MODIFIERS:
+Members of packages, classes and objects have access modifiers as private and protected. The default 
+is public. These access modifiers restrict the access to the members.
+
+Private members:
+A private member is visible only inside the class or object in which it is defined.
+Ex:
+class Outer {
+   class Inner {
+      private def f() { println("f") }
+      class InnerMost {
+         f() // OK
+      }
+   }
+   (new Inner).f() // Error: f is not accessible
+}
+Accessing f outside Inner class and inside Outer class is not acceptable since f is a private method. 
+The same in java wouldn't return an error because it lets outer class access private members of inner class.
+
+Protected Members:
+A protected member is accessible only from subclasses of the class.
+Ex:
+class Super
+{
+  protected def f() {println("F")}
+}
+class Sub extends Super {
+ f()
+ }
+class Other {
+(new Super).f() //Error f is not accessible
+}
+
+Accessing f in subclass Sub is acceptable since f is defined as protected in Super. As the class Other is not 
+inherited from Super, access to f is denied.
+
+Public Members: There is no explicit modifier for these members. They can be accessed from anywhere.
+
+Scope of Protection:
+We can specify qualifiers for the access modifiers. A modifier of the form private[X] or protected[X]
+means that access is private or protected up to X; where X could be package or class or object.
 
 
+SCALA OPERATORS:
 
+Arithmetic Operators: +, -, *, /, %
+Relational: ==, !=, >, <, >=, <=
+Logical: &&, ||, !
+Bitwise:works on bits and performs bit by bit operation. &, |, ^, ~, <<, >>, >>>
+Assignment: =, +=, -=, *=, /=, %=, <<=, >>=, &=, ^=, |=
 
+Operator precedence: This determines grouping terms in an expression which affects how an expression is 
+evaluated.
+precedence with highest at the top
 
-
-
-
-
-
+Postfix 	() []	Left toright 
+Unary 	! ~	Right to left 
+Multiplicative * / % 	Left to right 
+Additive  	+ - 	Left to right 
+Shift  	>> >>> <<  	Leftto right 
+Relational  	> >= < <=  	Left to right 
+Equality  	== != 	Left to right 
+Bitwise AND 	& 	Left to right 
+Bitwise XOR 	^ 	Left to right 
+Bitwise OR 	| 	Left to right 
+Logical AND 	&& 	Left to right 
+Logical OR 	|| 	Left to right 
+Assignment 	= += -= *= /= %= >>= <<= &= ^= |= 	Right to left 
+Comma 	,             Left to Right 
 
 
