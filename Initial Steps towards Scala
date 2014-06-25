@@ -122,6 +122,22 @@ abstract, case,	catch, class, def, do, else, extends, false,	final, finally, for
 lazy,	match, new,	null, object,	override, package, private, protected,	return,	sealed, super,
 this, throw, trait, try, true, type, val, var, while, with, yield, -, :, =, =>, <-, <:, <%, >:, #, @		
 
+Comments in Scala:
+Scala supports both single line comments (strating with //) and also multi line comments (/*.. */) as in java.
+
+Newline characters: A semicolon at the end of the statement is optional. It is essential if 
+we intend to write multiple statements on a single line.
+Example: val s=”hello”; println(s)
+
+Scala Packages: Package is named module of code.
+Importing a package -> import scala.xml._ 
+The above statement imports contents of scala.xml package.
+
+Importing a single class -> import scala.collection.mutable.HashMap
+
+Import more than one class or object from a package -> import scala.collection.immutable.{TreeMap, TreeSet}
+
+
 
    
    
