@@ -138,6 +138,74 @@ Importing a single class -> import scala.collection.mutable.HashMap
 Import more than one class or object from a package -> import scala.collection.immutable.{TreeMap, TreeSet}
 
 SCALA DATATYPES:
+Scala has same data types as java with same memory allocation and precision. Following are the supported 
+data types-
+Byte, short, int, long, float, double, char, string, boolean, unit, null (empty reference), unit (means no value),
+nothing (subtype of every other type which includes no values), any (supertype of any type; any object is of type Any),
+AnyRef (supertype of any reference type).
+
+As said, since everything in scala is an object all the above data types are objects.
+
+SCALA BASIC LITERALS:
+
+Integer literals: These are of type int. When the literal is long, it is followed by L or I suffix.
+Example: 034, 21, 0777L
+
+Floating Point Literals: These are of type float and followed by suffix F or f. If there is no suffix then
+the literal is treated as of type double.
+Example: 0.0, 1e30f, 3.1419f, 1.0e100
+
+Boolean literals: True and False are the two boolean types.
+
+Character literals: Single character enclosed in single quotes. The character can also have escape sequence.
+Example:'a', '\u001'
+
+String literals: Sequence of characters enclosed in double quotes. The characters are either printable or could also 
+be described by escape sequence.
+Example: "hello, \nWorld!"
+         "This string contains a \ "character"
+
+Multi Line Strings:
+A multi line string literal is a sequence of  characters enclosed in triple quotes (""".....""").
+Example: """ Hi I am Padma
+         working on Big Data
+         Technologies """
+         
+Null value: It is of type scala.Null and compatible with every reference type. The reference value refers to special
+null object.
+
+Following are the escape sequences recognized:
+\b, \t, \n, \f, \r, \", \', \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
    
