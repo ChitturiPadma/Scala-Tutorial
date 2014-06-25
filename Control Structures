@@ -47,6 +47,61 @@ LOOP TYPES:
 Loop: executes statements desired number of times. performs repetitive tasks.
 Scala has support for following loops: while, do..while, for
 
+Loop control statements: They change execution from normal sequence. Scala doesn't support break or continue statements as Java does
+but starting from Scala 2.8 version there is a way to break the loops.
+
+While loop:
+Syntax:
+while (condition)
+{ statement (s);
+}
+Ex:
+while( a < 20 ){
+         println( "Value of a: " + a );
+         a = a + 1;
+      }
+      
+While loop checks the condition at the top of the loop whereas do..while loop checks the condition at the bottom of the loop.
+
+do....while
+
+do {
+statement (s);
+}while (condition);
+The do..while loop executes the statements atleast once irrespective of the condition.
+
+Ex:
+ do{
+         println( "Value of a: " + a );
+         a = a + 1;
+      }while( a < 20 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
