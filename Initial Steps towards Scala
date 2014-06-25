@@ -17,3 +17,24 @@ scalac --> to compile scala code
 scala --> to run the byte code
 
 scalac and scala commands are same as javac and java
+
+Steps to install/run scala:
+
+On Windows:
+
+1. Java setup is required (java 1.5 or greater is required)
+2. Download scala from http://www.scala-lang.org/downloads
+   In windows, if its .msi installer, run the file as admin, accept license agreement and install it in 
+   some directory (as Drive:\Scala\..) or in the default location as C:\Program Files\Scala\..
+
+3. scala -version
+   The above command displays the scala version that is installed
+   
+On Linux:
+1. As discussed above , java is the pre-requisite for installing scala.
+2. Download scala jar which looks as scala-<version>-installer.jar.
+3. Now execute the following command:
+   java -jar scala-2.9.0.1-installer.jar
+4. During the installation process, accept the license agreement, specify the path where scala has to be installed
+   (eg: /usr/local/share).
+5. Finally, scala -version at the command prompt displays the version of scala that is installed.
