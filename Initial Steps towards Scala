@@ -137,6 +137,7 @@ Importing a single class -> import scala.collection.mutable.HashMap
 
 Import more than one class or object from a package -> import scala.collection.immutable.{TreeMap, TreeSet}
 
+SCALA DATATYPES:
 
 
    
