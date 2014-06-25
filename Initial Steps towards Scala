@@ -94,7 +94,7 @@ i.e HelloWorld. Now compile and run the code as below:
    
  •def main(args:Array[String]) -  It is the mandatory part of every scala program form which processing starts.
  
- Scala Identifiers
+SCALA IDENTIFIERS:
 As in all programming languages, keywords cannot be used as identifiers. Identifiers are case sensitive. 
 Four types of identifiers are supported in scala:
 
@@ -113,6 +113,15 @@ Example: unary_+, myvar_=
 
 •Literal idnetifiers: It is an arbitrary string enclosed in back ticks as ``
 Example: `x`, `<clint>`, `yield`
+
+SCALA KEYWORDS:
+
+List of scala keywords:
+
+abstract, case,	catch, class, def, do, else, extends, false,	final, finally, for, forSome,	if, implicit, import,
+lazy,	match, new,	null, object,	override, package, private, protected,	return,	sealed, super,
+this,	throw, trait, try, true, type, val, var, while,	with,	yield	,-, :, =, =>, <-,	<:, <%,	>:, #, @		
+
 
    
    
