@@ -18,3 +18,48 @@ Syntax: var or val VariableName : DataType [=Initial value]
 
 variable declaration in Java: int x=10;
 variable declaration in Scala: var x :int =10;
+
+Variable type inference:
+Instead of specifying the data type of the variable, based on the initial value assigned to it,
+type of the variable can be inferred.
+Example:
+var myVar=10;
+var mesg="Hello World Scala!"
+In the above declaration of the variables even though type of the variable is not specified, myVar will be int type
+and mesg will be of String type.
+
+Multiple Assignments:
+val (myVar:Int, mesg:String)=Pair(40,"Hi")
+              (or)
+val (myVar:Int, mesg:String)=(40,"Hi")
+              (or)
+var (myVar:Int, mesg:String)=(40,"Hi")
+              (or)
+var (myVar, mesg)=(100,"Hey")        
+
+Variable Types:
+Variables in scala can exist as fields, method parameters, local variables.
+
+Fields: These variables belong to an object. These are accessible in methods defined in the object and also outside the 
+object depending on the access modifier of the fields. They can be either mutable or immutable.
+
+Method Parameters: These variables are used to pass the values inside a method and are accessible from inside the method.
+These parameters are always mutable.
+
+Local Variables: These are declared inside a method and are accessible inside the method except that if they are returned 
+from the method, they will be accessible outside the method. 
+Local variables can be both mutable/immutable.
+
+SCALA ACCESS MODIFIERS:
+
+
+
+
+
+
+
+
+
+
+
+
