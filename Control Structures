@@ -108,9 +108,10 @@ for(value : String <- myArray ) {
     println(value);
 }
 
-In the above for loops, the first for loop intitalizes each element in the array to the text "value is: " with index appended.
-The third for loop interates the array using the generator <-. In each iteration, next element in the array is assigned to value
-and finally printed to the console.
+In the above for loops, the first for loop intitalizes each element in the array to the text "value is: " 
+with index appended.
+The third for loop interates the array using the generator <-. In each iteration, next element in the array is 
+assigned to value and finally printed to the console.
 
 Multiple For loop Filters:
 Nested Iteration:
