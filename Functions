@@ -37,3 +37,78 @@ object Hello{
       println("Hello, Scala!")
    }
 }
+
+
+Functions call-by-name:
+Typically, the parameters of the function would be by-value parameters which means the value of the parameter is 
+determined before it is passed to the function.
+
+Suppose if we would need a function that accepts an expression as a parameter which will not be evaluated until it 
+is called within our function. To support this feature, scala offers call-by-name parameters.
+
+Example:
+object CallByName
+{
+  def main(args:Array[String])
+   {
+    delayed(calc());
+
+   }
+     def calc() :Int={
+	
+         println("In calc function...");
+         return 9
+	 }
+   def delayed(t: => Int)
+   {
+    println("In delayed method..");
+    print ("Parameter value is.."+t)
+   }
+}
+
+Output:
+In delayed method..
+In calc function...
+Parameter value is..9
+
+
+In the above example calc() is the parameter to delayed() function. 
+Once the delayed is invoked, the message :Indelayed method" is printed indicating that delayed() has been entered.
+Now, while executing second print statement in delayed() (the execution takes place from right to left), the 
+parameter 't'indicates the value being returned from calc. Hence calc() is entered and displays the message 
+"In calc function...". The returned value 9 is printed as 
+"Parameter value is...9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
