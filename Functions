@@ -1,0 +1,39 @@
+Function is a group of statements that performs a task. We can divide the code into separate functions 
+such that each function performs a specific task.
+There is minor difference between scala methods and functions.
+
+A method is the one which is part of a class and has name and signature where as scala function is an object that
+could be assigned to a variable.
+
+In simple words to say, function defined as member of some object is called a method.
+
+Scala also has support for nested functions.
+
+Syntax of scala Function definition:
+def functionName ([list of parameters]) : [return type] = {
+   function body
+   return [expr]
+}
+
+Here return type could be any valid scala data type. list of parameters would be list of variables separated by comma.
+return type and scala data type are optional.
+
+Example of a function with return type:
+
+object Sum {
+def Sum(a:Int, b:Int) : Int = {
+
+ var sum:Int =0;
+ sum=a+b;
+ return sum }
+ }
+
+Function which returns nothing can return Unit that is equivalent to void in Java.
+Funtions that donot return anything are called Procedures.
+
+Example of a function that returns nothing:
+object Hello{
+   def printMe( ) : Unit = {
+      println("Hello, Scala!")
+   }
+}
