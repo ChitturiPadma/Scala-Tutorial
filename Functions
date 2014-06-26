@@ -19,6 +19,89 @@ Here return type could be any valid scala data type. list of parameters would be
 return type and scala data type are optional.
 
 Example of a function with return type:
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+There is minor difference between scala methods and functions.
+A method is the one which is part of a class and has name and signature where as scala function is an object that
+could be assigned to a variable.
+In simple words to say, function defined as member of some object is called a method.
+Scala also has support for nested functions.
+Syntax of scala Function definition:
+def functionName ([list of parameters]) : [return type] = {
+   function body
+   return [expr]
+}
+Here return type could be any valid scala data type. list of parameters would be list of variables separated by comma.
+return type and scala data type are optional.
+Example of a function with return type:
+object Sum {
+def Sum(a:Int, b:Int) : Int = {
+ var sum:Int =0;
+ sum=a+b;
+ return sum }
+ }
+Function which returns nothing can return Unit that is equivalent to void in Java.
+Funtions that donot return anything are called Procedures.
+Example of a function that returns nothing:
+object Hello{
+   def printMe( ) : Unit = {
+      println("Hello, Scala!")
+   }
+}
+Functions call-by-name:
+Typically, the parameters of the function would be by-value parameters which means the value of the parameter is 
+determined before it is passed to the function.
+Suppose if we would need a function that accepts an expression as a parameter which will not be evaluated until it 
+is called within our function. To support this feature, scala offers call-by-name parameters.
+Example:
+object CallByName
+Commit changes
 
 object Sum {
 def Sum(a:Int, b:Int) : Int = {
@@ -117,37 +200,17 @@ Result:
        def VarArgs_NormPars(args:String*,a:Int)
 
 
+Scala lets us specify default values for the function parameters. The arguments for such parameters can be omitted in which case,
+default value would be taken.
+Example:
+object Test {
+   def main(args: Array[String]) {
+        println( "Returned Value : " + addInt() );
+   }
+   def addInt( a:Int=5, b:Int=7 ) : Int = {
+      var sum:Int = 0
+      sum = a + b
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      return sum
+   }
+}
