@@ -76,14 +76,16 @@ Ex:
          a = a + 1;
       }while( a < 20 )
 
+
 For Loop:
 
 for(i <- 1 to 10) {
     println("i is " + i);
 }
 
-The above for loop iterates 10 times and for each iteration and for each iteration assigns the val i the next number in the range.
-i <- construct is called a generator. In each iteration i is initalized with a value.
+The above for loop iterates 10 times and for each iteration assigns the val i the next number 
+in the range.
+i <- construct is called a generator (as it generates range of values). In each iteration i is initalized with a value.
 1 to 10 is called Range type. It returns a range containing the values from 1 to 10.
 
 to vs until
@@ -113,40 +115,132 @@ with index appended.
 The third for loop interates the array using the generator <-. In each iteration, next element in the array is 
 assigned to value and finally printed to the console.
 
-Multiple For loop Filters:
+Multiple Ranges in a for loop:
+The for loop could also contain multiple ranges separated by semicolon (;). In this case, the loop will iterate
+through all the possible computations of the given ranges.
+Example:
+for( a <- 1 to 3; b <- 1 to 3){
+         println( "Value of a: " + a );
+         println( "Value of b: " + b );
+      }
+In the above for loop 2 ranges are specified and each contains 3 elements. So total possible computations would be 3*3=9,
+a combination here I would mean the pair (a,b).
+Result of the above example would be:
+
+Value of a: 1
+Value of b: 1
+Value of a: 1
+Value of b: 2
+Value of a: 1
+Value of b: 3
+Value of a: 2
+Value of b: 1
+Value of a: 2
+Value of b: 2
+Value of a: 2
+Value of b: 3
+Value of a: 3
+Value of b: 1
+Value of a: 3
+Value of b: 2
+Value of a: 3
+Value of b: 3
+
+For Loop with Collections:
+ for (var x <- List)
+ {
+   statement(s);
+ }
+here List is a collection type having list of numbers and the for loop iterates through all the elements in the loop.
+Example:
+
+val numList = List(1,2,3,4,5,6);
+
+      // for loop execution with a collection
+      for( a <- numList ){
+         println( "Value of a: " + a );
+      }
+      
+The above example could also be written as-
+val numList:List[Int]=List(1,2,3,4,5,6)
+
+  for (i<-0 until numList.length)
+  {
+    println("List element at i"+i+" is.."+numList(i));
+  }
+  
+For Loop with Filters:
+The for loop allows to filter out some elements using one or more if statements.
+Syntax:
+for( var x <- List
+      if condition1; if condition2...
+   ){
+   statement(s);
+}
+
+Example:
+val numList = List(1,2,3,4,5,6,7,8,9,10);
+
+      // for loop execution with multiple filters
+      for( a <- numList
+           if a != 3; if a < 8 ){
+         println( "Value of a: " + a );
+      }
+      
+Upon executing the above code, the for loop outputs the values 1,2,4,5,6,7 (satisfying the both if conditions)
+to the console. The above loop is equivalent to-
+      
+      for( a <- numList
+       {
+            if (a != 3; if a < 8 ) //Filtering within the loop
+         println( "Value of a: " + a );
+      }
+
+For Loop with yield:
+We can store the return values of a for loop in a variable.
+Syntax:
+var retVal = for{ var x <- List
+     if condition1; if condition2...
+}yield x
+
+Example:
+val numList = List(1,2,3,4,5,6,7,8,9,10);
+
+      // for loop execution with a yield
+      var retVal = for{ a <- numList 
+                        if a != 3; if a < 8
+                      }yield a
+      /* The above for loop returns the values 1,2,4,5,6,7..which satisfy the coditions specified in the loop.
+       Now retVal is a list which contains the values (1,2,4,5,6,7). */
+
+      // Now print returned values using another loop.
+      for( a <- retVal){
+         println( "Value of a: " + a );
+      }
+
 Nested Iteration:
+It is possible to do nested looping in a single for loop.
+For example assume we had and array of arrays. We could iterate them as follows-
+
+Example:
+var myArray : Array[Array[String]] = new Array[Array[String]](10);
+
+for(i <- 0 until myArray.length){
+    myArray(i) = new Array[String](10);
+    
+    for(j <- 0 until myArray(i).length){
+      myArray(i)(j) = "value is: " + i + ", " + j;
+    }
+}
+
+using netsed iteration:
+for(anArray : Array[String] <- myArray;
+    aString : String        <- anArray ) {
+
+    println(aString);
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+I have almost covered various control sturctures that scala provides with scenarios. would be including more if
+any new constructs are added in future versions.
 
