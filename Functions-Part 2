@@ -1,0 +1,83 @@
+Nested Functions:
+Scala supports to define functions inside a function. The functions defined inside other functions are called Local functions.
+Example:
+
+object Test {
+   def main(args: Array[String]) {
+      println( factorial(0) )
+      println( factorial(1) )
+      println( factorial(2) )
+      println( factorial(3) )
+   }
+
+   def factorial(i: Int): Int = {
+      def fact(i: Int, accumulator: Int): Int = {
+         if (i <= 1)
+            accumulator
+         else
+            fact(i - 1, i * accumulator)
+      }
+      fact(i, 1)
+   }
+}
+
+Result:
+1
+1
+2
+6
+
+Partially Applied Functions:
+
+When we invoke a function, its like applying the function to the arguments. If we send only few arguments, it is called a 
+partially applied function. Using this concept, we could bind few arguments and leave the rest to be filled in later.
+
+Example:
+
+
+import java.util.Date
+
+object Test {
+   def main(args: Array[String]) {
+      val date = new Date
+      log(date, "message1" )
+      Thread.sleep(1000)
+      log(date, "message2" )
+      Thread.sleep(1000)
+      log(date, "message3" )
+   }
+
+   def log(date: Date, message: String)  = {
+     println(date + "----" + message)
+   }
+}
+
+In the above example, log method is frequently invoked with same value for date and different values for message.
+We can actually eliminate passing the date to each call by applying that argument partially to the log.
+We could do this as below-
+
+import java.util.Date
+
+object Test {
+   def main(args: Array[String]) {
+      val date = new Date
+  
+/* bind value to date and leave the second parameter unbound by putting underscore. 
+ This is called partially applied function stored in a variable*/
+
+      val logWithDateBound = log(date, _ : String) 
+      
+  // New method is invoked with only the unbound argument message
+      logWithDateBound("message1" )
+      Thread.sleep(1000)
+      logWithDateBound("message2" )
+      Thread.sleep(1000)
+      logWithDateBound("message3" )
+   }
+
+   def log(date: Date, message: String)  = {
+     println(date + "----" + message)
+   }
+}
+
+
