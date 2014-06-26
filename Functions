@@ -79,6 +79,45 @@ parameter 't'indicates the value being returned from calc. Hence calc() is enter
 "In calc function...". The returned value 9 is printed as 
 "Parameter value is...9
 
+Funtion with variable number of arguments:
+The last parameter to a funtion may be repeated. We can variable length arguments list to the function.
+Example:
+def printArgs(a:Int, args:String*)
+{
+  a=10;
+  println("Value of a is...."+a);
+  for(arg<-args)
+  {
+    println(arg);
+  }
+}
+
+printArgs(10,"hello","hi')
+
+Result:
+Value of a is....10
+hello
+hi
+
+a is intialized to 10 and all the remaining arguments are considered as args.
+Here args declared as String* is actually an Array[String]. Also, note that the variable args is specified in the last.
+Ordinary arguments specified after varargs would lead to an error.
+Example:
+def VarArgs_NormPars(args:String*,a:Int)
+     | {
+     |   println("Integer is.."+a);
+     |   for(arg<-args)
+     |   {
+     |     println("Arg value is..."+arg);
+     |   }
+     | }
+
+Result:
+<console>:7: error: *-parameter must come last
+       def VarArgs_NormPars(args:String*,a:Int)
+
+
+
 
 
 
