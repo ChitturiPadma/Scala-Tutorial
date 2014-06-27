@@ -1,0 +1,64 @@
+Scala strings are Java strings. Every class in Java is available in Scala. 
+In Scala, as in Java, string is an immutable object whereas other objects like arrays can be modified which are called
+mutable objects.
+
+Declaring and defining a string:
+var greeting = "Hello world!";
+
+or
+
+var greeting:String = "Hello world!";
+
+Whenever string literal is encountered, a string object is created.
+If lot of modifications need to be done for Strings of characters, use  String Builder class.
+
+Methods available for Strings:
+
+String Length -> length() method returns number of characters in the string object.
+usage: <string_variable>.length()
+
+String concatenation -> string1.concat(string2) // returns a new string that is string1 appended with string2
+strings are also concatenated with + operator as in -
+"hello" + "world!!"
+
+Format strings -> printf() and format() are the methods to print output with formatted numbers.
+Example of printf:
+var fs = printf("The value of the float variable is " +
+                   "%f, while the value of the integer " +
+                   "variable is %d, and the string " +
+                   "is %s", floatVar, intVar, stringVar)
+      println(fs)
+
+String class in scala belong to java.lang.string
+
+String Methods (Most frequently used):
+
+char charAt(int index) //returns character at specified index
+int compareTo(Object o) //compares the string to another object 
+int compareTo(String) // compares two strings
+int compareToIgnoreCase(String str) //compares two strings ignoring case differences
+String concat(String str) //Concatenates the specified string to the end of this string.
+static String copyValueOf(char[] data) // Returns a String that represents the character sequence in the array specified.
+boolean endsWith(String suffix)  //Tests if this string ends with the specified suffix.
+int hashCode() // Returns a hash code for this string.
+int indexOf(int ch) // Returns the index within this string of the first occurrence of the specified character.
+int indexOf(String str) // Returns the index within this string of the first occurrence of the specified substring.
+int lastIndexOf(int ch)  // Returns the index within this string of the last occurrence of the specified character.
+boolean matches(String regex) // Tells whether or not this string matches the given regular expression.
+String replace(char oldChar, char newChar) // Returns a new string resulting from replacing all occurrences of
+                                              oldChar in this string with newChar.
+String replaceAll(String regex, String replacement
+// Replaces each substring of this string that matches the given regular expression with the given replacement.                                              
+
+String[] split(String regex) // Splits this string around matches of the given regular expression.
+boolean startsWith(String prefix) //Tests if this string starts with the specified prefix.
+String substring(int beginIndex) //Returns a new string that is a substring of this string.
+char[] toCharArray() // Converts this string to a new character array.
+String toLowerCase() //Converts all of the characters in this String to lower case using the rules of the default locale.
+String trim() // Returns a copy of the string, with leading and trailing whitespace omitted.
+
+There are also several variations of the above mentioned string methods like  indexOf(int ch, int fromIndex), 
+lastIndexOf(int ch, int fromIndex),  lastIndexOf(String str, int fromIndex), toUpperCase(), toUpperCase(Locale locale) etc.
+
+
+
