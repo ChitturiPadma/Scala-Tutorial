@@ -16,7 +16,7 @@ def functionName ([list of parameters]) : [return type] = {
 }
 
 Here return type could be any valid scala data type. list of parameters would be list of variables separated by comma.
-return type and scala data type are optional.
+return type and list of parameters are optional.
 
 Example of a function with return type:
 
@@ -71,7 +71,7 @@ Parameter value is..9
 
 
 In the above example calc() is the parameter to delayed() function. 
-Once the delayed is invoked, the message :Indelayed method" is printed indicating that delayed() has been entered.
+Once the delayed is invoked, the message : "In delayed method" is printed indicating that delayed() has been entered.
 Now, while executing second print statement in delayed() (the execution takes place from right to left), the 
 parameter 't'indicates the value being returned from calc. Hence calc() is entered and displays the message 
 "In calc function...". The returned value 9 is printed as 
@@ -115,8 +115,8 @@ Result:
        def VarArgs_NormPars(args:String*,a:Int)
 
 
-Scala lets us specify default values for the function parameters. The arguments for such parameters can be omitted in which case,
-default value would be taken.
+Scala lets us specify default values for the function parameters. The arguments for such parameters can be omitted 
+in which case, default value would be taken.
 Example:
 object Test {
    def main(args: Array[String]) {
