@@ -99,25 +99,60 @@ object Test {
    }
 }
 
-In the above example, the function/method printInt is invoked from main() by passing arguments as b and a
+In the above example, the function/method printInt is invoked from main() by passing arguments as b and then a
 while parameters of printInt specified as a and then b.
 
 
+Recursion Functions:
+Recursion means a function can call itself. Scala supports recursive functions very well.
+
+Example:
+object Test {
+   def main(args: Array[String]) {
+      for (i <- 1 to 10)
+         println( "Factorial of " + i + ": = " + factorial(i) )
+   }
+   
+   def factorial(n: BigInt): BigInt = {  
+      if (n <= 1)
+         1  
+      else    
+      n * factorial(n - 1)
+   }
+}
 
 
+Higher Order functions:
+These are the functions that take other functions as parameters or whose result is a function.
 
 
+Anonymous functions:
+These are called function literals and at run time, these are instantiated into objects called function values.
+First class functions -> we can express functions in function literal syntax (i.e (x:Int) => x+1
+Example:
+var inc = (x:Int) => x+1
+var x = inc(7)-1
+
+Multiple parameters : var mul = (x:Int, y:Int) => x*y
+No parameters : var userDir = () => { System.getProperty("user.dir") }
 
 
+Currying Functions:
+Currying means transforming a function that takes multiple parameters into chain of functions, 
+each taking a single parameter.
+Syntax:
+def strcat(s1: String)(s2: String) = s1 + s2
 
+object Test {
+   def main(args: Array[String]) {
+      val str1:String = "Hello, "
+      val str2:String = "Scala!"
+      println( "str1 + str2 = " +  strcat(str1)(str2) )
+   }
 
-
-
-
-
-
-
-
-
+   def strcat(s1: String)(s2: String) = {
+      s1 + s2
+   }
+}
 
 
