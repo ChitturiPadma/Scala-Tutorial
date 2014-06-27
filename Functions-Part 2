@@ -156,3 +156,39 @@ object Test {
 }
 
 
+
+SCALA CLOSURES:
+A closure is a function whose return value depends on the value of one or more variables declared outside the 
+function.
+
+Consider this example:
+val multiplier = (i:Int) => i * 10
+
+The above anonymous functions has the variable i whose value determines the return value from function.
+
+Consider another piece of code:
+val multiplier = (i:Int) => i * factor
+
+Here there are two variables i and factor. i is the formal parameter which is the value passed to the function whenever
+multiplier is called. However factor is not formal parameter.
+
+var factor = 3
+val multiplier = (i:Int) => i * factor
+
+In the above two lines of code, factor refers to variable outside the function but which is in the scope.
+
+Sample Code:
+object Test {
+   def main(args: Array[String]) {
+      println( "muliplier(1) value = " +  multiplier(1) )
+      println( "muliplier(2) value = " +  multiplier(2) )
+   }
+   var factor = 3
+   val multiplier = (i:Int) => i * factor
+}
+
+Result:
+muliplier(1) value = 3
+muliplier(2) value = 6
+
+
