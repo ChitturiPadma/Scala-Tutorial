@@ -27,8 +27,8 @@ Result:
 2
 6
 
-Partially Applied Functions:
 
+Partially Applied Functions:
 When we invoke a function, its like applying the function to the arguments. If we send only few arguments, it is called a 
 partially applied function. Using this concept, we could bind few arguments and leave the rest to be filled in later.
 
@@ -79,5 +79,45 @@ object Test {
      println(date + "----" + message)
    }
 }
+
+
+Functions with Named Arguments:
+In a normal function call, the arguments passed must match with the order in which parameters of the callee function 
+are defined.
+
+Named arguments allow to pass parameters to function in different order however arguments are preceeded by parameter name
+and equals sign.
+
+Example:
+object Test {
+   def main(args: Array[String]) {
+        printInt(b=5, a=7);
+   }
+   def printInt( a:Int, b:Int ) = {
+      println("Value of a : " + a );
+      println("Value of b : " + b );
+   }
+}
+
+In the above example, the function/method printInt is invoked from main() by passing arguments as b and a
+while parameters of printInt specified as a and then b.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
