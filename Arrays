@@ -1,0 +1,107 @@
+An array is a collection of variables of same type and the elements are stored sequentially.
+
+Declaring Array Variables:
+var z:Array[String]=new Array[String](3)
+or
+var z=new Array[String](3)
+
+Here z is an array of strings which holds up to 3 elements.
+Access to individual elements is as-
+z(0)="Padma"
+z(1)="Priya"
+z(4/2)="Chitturi"
+
+Initializing Arrays at the time of declaration: 
+var myList = Array(1.9, 2.9, 3.4, 3.5)
+
+Difference to be noted is in Java, array elements are accessed as array1[index] whereas in scala, array elements are 
+accessed as array1(index).
+The index could be an expression that yields a whole number. 
+
+Processing Arrays:
+Loops are often used to process arrays.
+
+Example:
+object Test {
+   def main(args: Array[String]) {
+      var myList = Array(1.9, 2.9, 3.4, 3.5) // Array declaration and intialization
+      
+      // Print all the array elements
+      for ( x <- myList ) {
+         println( x )
+      }
+      // Summing all elements
+      var total = 0.0;
+      for ( i <- 0 to (myList.length - 1)) {
+         total += myList(i);
+      }
+      println("Total is " + total);
+    }
+}
+
+Multi-Dimensional Arrays: Arrays whose elements are arrays.
+For instance, matrices and tables are examples of 2d arrays. Scala doen't directly support multi-dimensional arrays.
+However there are various methods to process arrays in any dimension.
+
+
+2d arrays example:
+var myMatrix = Array.ofDim[Int](3,3)
+
+Processing a 2d array:
+import Array._
+
+object Test {
+   def main(args: Array[String]) {
+      var myMatrix = ofDim[Int](3,3)
+      
+      // build a matrix
+      for (i <- 0 to 2) {
+         for ( j <- 0 to 2) {
+            myMatrix(i)(j) = j;
+         }
+      }
+      
+      // Print two dimensional array
+      for (i <- 0 to 2) {
+         for ( j <- 0 to 2) {
+            print(" " + myMatrix(i)(j));
+         }
+         println();
+      }
+    
+   }
+}
+
+Concatenate Arrays:
+concat() method is used to concatenate two arrays.
+
+Example:
+import Array._
+
+object Test {
+   def main(args: Array[String]) {
+      var myList1 = Array(1.9, 2.9, 3.4, 3.5)
+      var myList2 = Array(8.9, 7.9, 0.4, 1.5)
+
+      var myList3 =  concat( myList1, myList2)
+      
+      // Print all the array elements
+      for ( x <- myList3 ) {
+         println( x )
+      }
+   }
+}
+
+We could concatenate more than 2 arrays. However, the arrays should be of same type. Trying to concatenate arrays of 
+different data types results in type mismatch errors.
+
+
+
+
+
+
+
+
+
+
+
