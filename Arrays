@@ -95,6 +95,32 @@ object Test {
 We could concatenate more than 2 arrays. However, the arrays should be of same type. Trying to concatenate arrays of 
 different data types results in type mismatch errors.
 
+Create Array with Range:
+Use range method to generate an array containing sequence of integers within the range.
+Example:
+import Array._
+
+object Test {
+   def main(args: Array[String]) {
+      var myList1 = range(10, 20, 2)
+      var myList2 = range(10,20)
+
+      // Print all the array elements
+      for ( x <- myList1 ) {
+         print( " " + x )
+      }
+
+   }
+   
+}
+
+For using any array method, import Array._ package in the code.
+
+Scala Array Methods:
+
+def apply( x: T, xs: T* ): Array[T]
+Creates an array of T objects, where T can be Unit, Double, Float, Long, Int, Char, Short, Byte, Boolean.
+
 
 
 
