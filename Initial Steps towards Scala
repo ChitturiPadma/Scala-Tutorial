@@ -92,7 +92,7 @@ i.e HelloWorld. Now compile and run the code as below:
   extension .scala to the end of the file name. 
   Example:  if object name is HelloWorld then the file should be saved as HelloWorld.scala
    
- •def main(args:Array[String]) -  It is the mandatory part of every scala program form which processing starts.
+ •def main(args:Array[String]) -  It is the mandatory part of every scala program from which processing starts.
  
 SCALA IDENTIFIERS:
 As in all programming languages, keywords cannot be used as identifiers. Identifiers are case sensitive. 
