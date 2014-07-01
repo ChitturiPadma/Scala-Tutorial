@@ -92,8 +92,9 @@ object Test {
    }
 }
 
-We could concatenate more than 2 arrays. However, the arrays should be of same type. Trying to concatenate arrays of 
-different data types results in type mismatch errors.
+We could concatenate more than 2 arrays. However, the arrays should be of same data type or could be of type Any. 
+Trying to concatenate arrays of different data types (i.e one array of type int and other of type String or 
+one of type Any and other of type int etc)results in type mismatch errors.
 
 Create Array with Range:
 Use range method to generate an array containing sequence of integers within the range.
@@ -118,15 +119,78 @@ For using any array method, import Array._ package in the code.
 
 Scala Array Methods:
 
-def apply( x: T, xs: T* ): Array[T]
+1. def apply( x: T, xs: T* ): Array[T]
 Creates an array of T objects, where T can be Unit, Double, Float, Long, Int, Char, Short, Byte, Boolean.
 
+Example:
+var myList :Array[Int]=new Array[Int](4);
+myList=Array.apply(12,13,14,15);	
+     for(element <- myList)
+         println(element)
+         
+Infact, we could also create an array without using apply method as-
+var myList=Array(12,13,14,15)
 
 
+2. def concat[T]( xss: Array[T]* ): Array[T]
+Concatenates all arrays into a single array.
 
+Example:
+var myList1=Array(10,20,30,17.8)
+	var myList2=Array(100,200,34.5	)
+	var myList3=concat(myList1,myList2)
 
+	 for(ele <- myList3)
+	    println(ele)
+	    
+	      
+3. def copy( src: AnyRef, srcPos: Int, dest: AnyRef, destPos: Int, length: Int ): Unit
+Copy one array to another. This function copies source array at desired position in destination array.
 
+Example:
+var myList1=Array(10,20,30,17.8)
+var myList2=Array(100,200,34.5)
 
+copy(myList1,1,myList2,1,1) // copies 1 element from myList1 into myList2 at 2nd poisition (i.e at index 2).
+// The element at 2nd position in myList2 is deleted and element from 1st position of myList1 is copied into that.
+
+for (ele <- myList2)
+	  print(" "+ele)
+	  
+4. def empty[T]: Array[T]
+Returns an array of length 0
+Example:
+var myList4=empty[Int];
+
+5. def iterate[T]( start: T, len: Int )( f: (T) => T ): Array[T]
+Returns an array containing repeated applications of a function to a start value.
+	  
+6. def fill[T]( n: Int )(elem: => T): Array[T]
+Returns an array that contains the results of some element computation a number of times.
+
+7.	def fill[T]( n1: Int, n2: Int )( elem: => T ): Array[Array[T]]
+Returns a two-dimensional array that contains the results of some element computation a number of times.
+
+8. def ofDim[T]( n1: Int, n2: Int ): Array[Array[T]]
+Creates a 2-dimensional array
+
+Example:
+var myMatrix=Array.ofDim[Int](3,4)
+//creates an array of 3 elements and each element is again an array of 4 elements.
+A 3d array can also be created in the same way but with defining 3 dimensions as ofDim[T](n1,n2,n3)
+
+9. def range( start: Int, end: Int, step: Int ): Array[Int]
+Returns an array containing equally spaced values in some integer interval.
+Example:
+var myList5=range(10,20,3);
+	for(i <- 0 until myList5.length)
+	   print (" "+myList5(i));
+	   
+10. def tabulate[T]( n: Int )(f: (Int)=> T): Array[T]
+Returns an array containing values of a given function over a range of integer values starting from 0.
+
+11. def tabulate[T]( n1: Int, n2: Int )( f: (Int, Int ) => T): Array[Array[T]]
+Returns a two-dimensional array containing values of a given function over ranges of integer values starting from 0.
 
 
 
