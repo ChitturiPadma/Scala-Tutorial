@@ -47,7 +47,8 @@ int lastIndexOf(int ch)  // Returns the index within this string of the last occ
 boolean matches(String regex) // Tells whether or not this string matches the given regular expression.
 String replace(char oldChar, char newChar) // Returns a new string resulting from replacing all occurrences of
                                               oldChar in this string with newChar.
-String replaceAll(String regex, String replacement
+                                              
+String replaceAll(String regex, String replacement)
 // Replaces each substring of this string that matches the given regular expression with the given replacement.                                              
 
 String[] split(String regex) // Splits this string around matches of the given regular expression.
