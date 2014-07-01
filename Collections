@@ -1,0 +1,79 @@
+Scala has support for collections. Collections are containers of things. The number of elements could be either 0 or 1 or
+more. Collections could be either strict or lazy. Lazy means elements donot consume memory until they are accessed.
+
+Another categorization of collections is ether they are mutable or immutable.
+
+Example to define collections:
+
+// Define List of integers.
+val x = List(1,2,3,4)
+
+// Define a set.
+var x = Set(1,3,5,7)
+
+// Define a map.
+val x = Map("one" -> 1, "two" -> 2, "three" -> 3)
+
+// Create a tuple of two elements.
+val x = (10, "Scala")
+
+// Define an option
+val x:Option[Int] = Some(5)
+
+Scala Lists:
+Lists are similar to arrays but the key differnece lies in-
+  List elements are immutable where as array elements are mutable.
+  List represents a linked list whereas arrays are flat.
+  
+Defining a list:
+// List of Strings
+val fruit: List[String] = List("apples", "oranges", "pears")
+
+// List of Integers
+val nums: List[Int] = List(1, 2, 3, 4)
+
+// Empty List.
+val empty: List[Nothing] = List()
+
+// Two dimensional list
+val dim: List[List[Int]] =
+   List(
+      List(1, 0, 0),
+      List(0, 1, 0),
+      List(0, 0, 1)
+      
+      
+Lists can also be defined using two fundamental blocks- Nil and ::
+// List of Strings
+val fruit = "apples" :: ("oranges" :: ("pears" :: Nil))
+
+// List of Integers
+val nums = 1 :: (2 :: (3 :: (4 :: Nil)))
+
+// Empty List.
+val empty = Nil
+
+// Two dimensional list
+val dim = (1 :: (0 :: (0 :: Nil))) ::
+          (0 :: (1 :: (0 :: Nil))) ::
+          (0 :: (0 :: (1 :: Nil))) :: Nil
+          
+Basic Operations on List:
+ val fruit = "apples" :: ("oranges" :: ("pears" :: Nil))
+      val nums = Nil
+
+      println( "Head of fruit : " + fruit.head )
+      println( "Tail of fruit : " + fruit.tail )
+      println( "Check if fruit is empty : " + fruit.isEmpty )
+      println( "Check if nums is empty : " + nums.isEmpty )
+      
+Result:
+Head of fruit : apples
+Tail of fruit : List(oranges, pears)
+Check if fruit is empty : false
+Check if nums is empty : true
+
+head -> this method returns first element of the list.
+tail -> this method returns a list containing all elements except first.
+isEmpty -> this method returns true if the list is empty and otherwise false.
+
