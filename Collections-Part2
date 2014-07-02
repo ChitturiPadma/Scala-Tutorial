@@ -1,0 +1,29 @@
+Scala Sets:
+It is a collection of pairwise different elements of same type. The key distinct feature of set is that it doesn't contain duplicte elements.
+There are two kinds of sets- immutable and mutable.
+By default, scala sets are immutable. If we want to use mutable set, import scala.collection.mutable.Set class.
+immutable set refers to as Set and we can refer the mutable set as mutable.Set
+
+Declare Immutable set:
+var s:Set[Int]=Set() //Empty set of integer type
+var s:Set[Int]=Set(1,3,5,7)
+var s=Set(1,3,5,7)
+
+Basic Operations on Set:
+head -> returns first element of the set
+tail -> returns a set containing all the elements except the first
+isEmpty -> returns tru if the set is empty otherwise false
+
+Example:
+val fruit = Set("apples", "oranges", "pears")
+
+println( "Head of fruit : " + fruit.head )
+println( "Tail of fruit : " + fruit.tail )
+println( "Check if fruit is empty : " + fruit.isEmpty )
+println( "Check if nums is empty : " + nums.isEmpty )
+
+Result:
+Head of fruit : apples
+Tail of fruit : Set(oranges, pears)
+Check if fruit is empty : false
+Check if nums is empty : true
