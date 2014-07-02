@@ -1,5 +1,6 @@
 Scala Sets:
-It is a collection of pairwise different elements of same type. The key distinct feature of set is that it doesn't contain duplicte elements.
+It is a collection of pairwise different elements of same type. The key distinct feature of set is that it doesn't contain 
+duplicte elements.
 There are two kinds of sets- immutable and mutable.
 By default, scala sets are immutable. If we want to use mutable set, import scala.collection.mutable.Set class.
 immutable set refers to as Set and we can refer the mutable set as mutable.Set
