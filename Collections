@@ -77,3 +77,61 @@ head -> this method returns first element of the list.
 tail -> this method returns a list containing all elements except first.
 isEmpty -> this method returns true if the list is empty and otherwise false.
 
+Concatenating Lists:
+Use either ::: or List.::: or List.concat() to concatenate two or more lists.
+Example:
+val fruit1 = "apples" :: ("oranges" :: ("pears" :: Nil))
+val fruit2 = "mangoes" :: ("banana" :: Nil)
+
+//concatenating lists
+var fruit = fruit1 ::: fruit2
+fruit = fruit1.:::(fruit2)
+fruit = List.concat(fruit1, fruit2)
+
+Creating Uniform Lists:
+List.fill() creates a list consisting of zero or more copies of the same element.
+Example:
+val fruit = List.fill(3)("apples") // Repeats apples three times.
+println( "fruit : " + fruit  )
+
+Result:
+fruit : List(apples, apples, apples)
+
+Tabulating a function:
+Use function along with List.tabulate() to apply on all the elements before tabulating the list. The first argument determines the 
+dimesnions of the list to create, the second describes the elements of the list.
+
+Example:
+val squares = List.tabulate(6)(n => n * n)
+val mul = List.tabulate( 4,5 )( _ * _ )  //creates a 2d list where each element is a list containing 5 elements. The elements are computed as 
+                                        product of respective indices that refer the element in the list.
+
+Reverse List Order:
+List.reverse reverses all elements of the list.
+
+Example:
+val fruit = "apples" :: ("oranges" :: ("pears" :: Nil))
+println("After reverse fruit: "+ fruit.reverse);
+
+Result:
+After reverse fruit: List(pears, oranges, apples)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
