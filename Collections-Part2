@@ -27,3 +27,40 @@ Head of fruit : apples
 Tail of fruit : Set(oranges, pears)
 Check if fruit is empty : false
 Check if nums is empty : true
+ 
+Concatenating Sets:
+++ or Set.++() method is used to concatenate two or more sets. One point to be noted here is while concatenating the sets, duplicate elements 
+are removed.
+Example:
+val fruit1 = Set("apples", "oranges", "pears")
+val fruit2 = Set("mangoes", "banana")
+
+// use two or more sets with ++ as operator
+var fruit = fruit1 ++ fruit2
+println( "fruit1 ++ fruit2 : " + fruit )
+
+// use two sets with ++ as method
+fruit = fruit1.++(fruit2)
+println( "fruit1.++(fruit2) : " + fruit )
+
+Other methods like Set.max and Set.min are used to find out the maximum and minimum elements in the set.
+Example:
+val num = Set(5,6,9,20,30,45)
+
+// find min and max of the elements
+println( "Min element in Set(5,6,9,20,30,45) : " + num.min ) // returns 5
+println( "Max element in Set(5,6,9,20,30,45) : " + num.max ) // returns 45
+
+Find common values in Sets:
+Use Set.& or Set.intersect are used to find out the common values between twos sets.
+Example:
+ val num1 = Set(5,6,9,20,30,45)
+      val num2 = Set(50,60,9,20,35,55)
+
+// find common elements between two sets
+println( "num1.&(num2) : " + num1.&(num2) )
+println( "num1.intersect(num2) : " + num1.intersect(num2) )
+
+
+
+
