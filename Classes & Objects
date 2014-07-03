@@ -1,1 +1,77 @@
 A class is a template for objects. Once a class is defined, we can create objects using the keyword new.
+
+Example of a Class:
+class Point(xc: Int, yc: Int) {
+ 
+ // Class variables which are fields of the class.
+   var x: Int = xc
+   var y: Int = yc
+
+// Class methods
+   def move(dx: Int, dy: Int) {
+      x = x + dx
+      y = y + dy
+      println ("Point x location : " + x);
+      println ("Point y location : " + y);
+   }
+}
+
+The class name works as class constructor which can take a number of parameters. If we notice the above code defines two 
+constructor arguments xc and yc and these are visible in the whole body of the class.
+
+Objects can be created as-
+val pt= new Point(10,20);
+or 
+val pt:Point= new Point(10,20);
+or
+var pt= new Point(10,20);
+or
+var pt:Point= new Point(10,20);
+
+Extending a Class:
+Method overriding requires the override keyword and only the primary constructor can pass paramters to base constructor.
+
+class Point(val xc: Int, val yc: Int) {
+   var x: Int = xc
+   var y: Int = yc
+   def move(dx: Int, dy: Int) {
+      x = x + dx
+      y = y + dy
+      println ("Point x location : " + x);
+      println ("Point y location : " + y);
+   }
+}
+
+class Location(override val xc: Int, override val yc: Int,
+   val zc :Int) extends Point(xc, yc){
+   var z: Int = zc
+
+   def move(dx: Int, dy: Int, dz: Int) {
+      x = x + dx
+      y = y + dy
+      z = z + dz
+      println ("Point x location : " + x);
+      println ("Point y location : " + y);
+      println ("Point z location : " + z);
+   }
+}
+
+In the above example, Location is subclass and Point is superclass. Scala allows inheritance from only one class.
+
+Scala doesn't support static memebers. Instead, scala has singleton objects. A singleton is a class which is  created 
+using the keyword object rather than class. It can have only one instance. We can't pass parameters to the primary 
+constructor as we could do this for other classes.
+
+Best example for singleton objects is how we define main method in a singleton object.
+
+Example of Singleton object:
+
+object test {
+
+  def main(args:Array[String]
+   {
+   
+    }
+    
+}
+
