@@ -120,9 +120,58 @@ Check if colors is empty : false
 Check if nums is empty : true
 
 Concatenating Maps:
+++ operator or Map.++() is used to concatenate 2 or more maps. While concatenating maps, the duplicate keys would be
+removed.
+Example:
+ val colors1 = Map("red" -> "#FF0000",
+                        "azure" -> "#F0FFFF",
+                        "peru" -> "#CD853F")
+      val colors2 = Map("blue" -> "#0033FF",
+                        "yellow" -> "#FFFF00",
+                        "red" -> "#FF0000")
 
+      // use two or more Maps with ++ as operator
+      var colors = colors1 ++ colors2
+      println( "colors1 ++ colors2 : " + colors )
 
+      // use two maps with ++ as method
+      colors = colors1.++(colors2)
+      println( "colors1.++(colors2)) : " + colors )
 
+Here the maps colors1 and colors2 have duplicate key "red". Hence only one of the keys would be taken in concatenated
+map.
 
+Print keys and values from a Map:
+We can iterate through keys and values of a Map using foreach loop.
+
+Example:
+val colors = Map("red" -> "#FF0000",
+                       "azure" -> "#F0FFFF",
+                       "peru" -> "#CD853F")
+
+colors.keys.foreach{ i =>  
+                    print( "Key = " + i )
+                    println(" Value = " + colors(i) )}
+
+foreach is used to iterate through the keys. Result of execution of the above code is...
+
+Result:
+Key = red Value = #FF0000
+Key = azure Value = #F0FFFF
+Key = peru Value = #CD853F
+
+Map.contains method is used to test if a given key exists in the map or not.
+Example:
+  val colors = Map("red" -> "#FF0000",
+                       "azure" -> "#F0FFFF",
+                       "peru" -> "#CD853F")
+ 
+ // Checking if the key "red" exists in the map colors.
+if( colors.contains( "red" )){
+      println("Red key exists with value :"  + colors("red"))
+   }
+else{
+     println("Red key does not exist")
+   }
 
 
