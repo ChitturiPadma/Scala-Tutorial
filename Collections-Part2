@@ -66,3 +66,63 @@ Scala Set Methods:
 
 
 
+Scala Maps:
+Maps is a collection of key/value pairs. A value can be retrieved based on its key. Keys are unique but values need not be unique.
+Maps are also called Hash tables. Two types of maps- immutable and mutable. Bydefault, Scala maps are immutable. To use
+mutable map, import scala.collection.mutable.Map class. Refer to mutable map as mutable.Map.
+
+Example:
+// Empty Hash table:
+var A:Map[Char,Int] = Map()
+
+// A map with keys and values.
+val colors = Map("red" -> "#FF0000", "azure" -> "#F0FFFF")
+
+While defining the empty map, defining type for empty map is essential, if we want to add key/value pair to Map at some point of time.
+
+Defining Empty map with no type:
+var nums=Map() // empty ma is created with type as Map[Nothing, Nothing]=Map()
+
+Now adding key/value pairs-
+A += ('I' -> 1) 
+
+The above statement results in the following error-
+ error: type mismatch;
+ found   : (Char, Int)
+ required: (Nothing, Nothing)
+              nums+=('I'->1)
+              
+Basic Operations on Map:
+keys - returns an iterable containign each key in the map
+values - returns iterable containing each value in the map
+isEmpty - returns true if map is empty otherwise false.
+
+Example:
+object Test {
+   def main(args: Array[String]) {
+      val colors = Map("red" -> "#FF0000",
+                       "azure" -> "#F0FFFF",
+                       "peru" -> "#CD853F")
+
+      val nums: Map[Int, Int] = Map()
+
+      println( "Keys in colors : " + colors.keys )
+      println( "Values in colors : " + colors.values )
+      println( "Check if colors is empty : " + colors.isEmpty )
+      println( "Check if nums is empty : " + nums.isEmpty )
+   }
+}
+
+Result:
+Keys in colors : Set(red, azure, peru)
+Values in colors : MapLike(#FF0000, #F0FFFF, #CD853F)
+Check if colors is empty : false
+Check if nums is empty : true
+
+Concatenating Maps:
+
+
+
+
+
+
