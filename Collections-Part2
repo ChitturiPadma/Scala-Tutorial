@@ -30,8 +30,8 @@ Check if fruit is empty : false
 Check if nums is empty : true
  
 Concatenating Sets:
-++ or Set.++() method is used to concatenate two or more sets. One point to be noted here is while concatenating the sets, duplicate elements 
-are removed.
+++ or Set.++() method is used to concatenate two or more sets. One point to be noted here is while concatenating the sets,
+duplicate elements are removed.
 Example:
 val fruit1 = Set("apples", "oranges", "pears")
 val fruit2 = Set("mangoes", "banana")
@@ -67,9 +67,9 @@ Scala Set Methods:
 
 
 Scala Maps:
-Maps is a collection of key/value pairs. A value can be retrieved based on its key. Keys are unique but values need not be unique.
-Maps are also called Hash tables. Two types of maps- immutable and mutable. Bydefault, Scala maps are immutable. To use
-mutable map, import scala.collection.mutable.Map class. Refer to mutable map as mutable.Map.
+Maps is a collection of key/value pairs. A value can be retrieved based on its key. Keys are unique but values need 
+not be unique.Maps are also called Hash tables. Two types of maps- immutable and mutable. Bydefault, Scala maps are 
+immutable. To usemutable map, import scala.collection.mutable.Map class. Refer to mutable map as mutable.Map.
 
 Example:
 // Empty Hash table:
@@ -78,7 +78,8 @@ var A:Map[Char,Int] = Map()
 // A map with keys and values.
 val colors = Map("red" -> "#FF0000", "azure" -> "#F0FFFF")
 
-While defining the empty map, defining type for empty map is essential, if we want to add key/value pair to Map at some point of time.
+While defining the empty map, defining type for empty map is essential, if we want to add key/value pair to Map at 
+some point of time.
 
 Defining Empty map with no type:
 var nums=Map() // empty ma is created with type as Map[Nothing, Nothing]=Map()
@@ -173,5 +174,7 @@ if( colors.contains( "red" )){
 else{
      println("Red key does not exist")
    }
+
+Scala Map Mehtods:
 
 
