@@ -1,5 +1,6 @@
 Nested Functions:
-Scala supports to define functions inside a function. The functions defined inside other functions are called Local functions.
+Scala supports to define functions inside a function. The functions defined inside other functions are called 
+Local functions.
 Example:
 
 object Test {
