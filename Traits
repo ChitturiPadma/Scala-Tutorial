@@ -10,5 +10,25 @@ trait Equal {
   def isNotEqual(x: Any): Boolean = !isEqual(x)
 }
 
-In the above trait definition, the method isEqual nas no implementation whereas the method isNotEqual has its implementation.
+In the above trait definition, the method isEqual has no implementation whereas the method !isNotEqual has its implementation.
 The classes which extend a trait can give implementation for the un-implemented methods like isEqual.
+
+Example of a class extending a trait:
+
+trait Equal {
+  def isEqual(x: Any): Boolean
+  def isNotEqual(x: Any): Boolean = !isEqual(x)
+}
+
+class Point(xc: Int, yc: Int) extends Equal {
+  var x: Int = xc
+  var y: Int = yc
+  
+  // Implementation isEqual method
+  def isEqual(obj: Any) =
+    obj.isInstanceOf[Point] &&
+    obj.asInstanceOf[Point].x == x
+}
+
+Use traits-
+1. If certain behavior has to be reused in multiple classes than make it a trait.
