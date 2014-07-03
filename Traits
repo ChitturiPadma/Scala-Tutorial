@@ -1,0 +1,5 @@
+Mehtods and field definitions are infact wrapped into traits. These can be reused by extending them into classes.
+Unlike inheritance, a class can extend any no.of traits.
+
+To aovid confusion and for people who are trying hard to makeout what trait meand and how it could be used in class,
+trait can very well compared to abstract classes in Java.
