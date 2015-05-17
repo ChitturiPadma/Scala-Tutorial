@@ -1,5 +1,9 @@
 Scala has support for collections. Collections are containers of things. The number of elements could be either 0 or 1 or
 more. Collections could be either strict or lazy. Lazy means elements donot consume memory until they are accessed.
+Scala favors immutable collections although mutable versions are provided.  
+
+If we want to modify a collection and operations on it are all within a single thread, choose mutable collection.
+If collection needs to be used across threads or actors, immutables are better.
 
 Another categorization of collections is ether they are mutable or immutable.
 
@@ -116,7 +120,51 @@ println("After reverse fruit: "+ fruit.reverse);
 Result:
 After reverse fruit: List(pears, oranges, apples)
 
+if we want to prefix an element, that is, place it in the front of the list,
+we can use the special method :: ( ).
 
+val list = List(1,2,3,4,5)
+val prefixedList = 7 :: list
+println("First Element in Prefixed"+prefixedList.head)
+
+Append a list:
+val appendList = list ::: List(3,4,5,6)
+
+
+val feeds = List("blog.toolshed.com" , "pragdave.pragprog.com" ,
+"dimsumthinking.com/blog" )
+val prefixedList = "forums.pragprog.com/forums/87" :: feeds
+val feedsWithForums =
+feeds ::: List("forums.pragprog.com/forums/87" , "forums.pragprog.com/forums/55" )
+val feedsWithForums =
+feeds ::: List("forums.pragprog.com/forums/87" , "forums.pragprog.com/forums/55" )
+
+println("Feeds with blog: " + feeds.filter( _ contains "blog" ).mkString(", " ))
+println("All feeds have com: " + feeds.forall( _ contains "com" ))
+println("All feeds have dave: " + feeds.forall( _ contains "dave" ))
+println("Any feed has dave: " + feeds.exists( _ contains "dave" ))
+println("Any feed has bill: " + feeds.exists( _ contains "bill" ))
+
+Displaying the length of each feed name
+println("Feed url lengths: " + feeds.map( _.length ).mkString(", " ))
+
+foldLeft:
+The foldLeft ( ) method will invoke the given function value (code block) for
+each element in the list, starting from the left. It passes two parameters
+to the function value. The first parameter is a partial result from the
+execution of the function value for the previous element (which is why
+it’s called folding.
+
+The second parameter is an element in the list. The
+initial value for the partial result is provided as the parameter to the
+method ( Zero in this example). The foldLeft ( ) method forms a chain of
+elements and carries the partial result of computation in the function
+value from one element to the next, starting from the left.
+
+Similarly,
+foldRight ( ) will do the same, starting at the right.
+Example: val total = feeds.foldLeft(0) { (total, feed) => total + feed.length }
+println("Total length of feed urls: " + total )
 
 
 
