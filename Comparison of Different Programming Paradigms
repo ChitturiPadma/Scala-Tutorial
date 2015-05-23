@@ -1,0 +1,41 @@
+
+Main programming paradigms:
+Imperative : defines computation as a series of statements that change program state
+Functional : treats computation as evaluation of mathematical functions and avoids change of state nd mutable data
+Object-oriented : organizes programs as objects 
+Event-driven : flow of program is determined by events (such as sensor outputs or user actions (clicks) or messages
+from threads)
+Declarative :  defines computation logic without defining its detailed control flow (ex: SQL, CSS)
+The functional programming paradigm was explicitly created to support a pure functional approach to problem solving. 
+With an imperative approach, a developer writes code that describes in exacting detail the steps that the computer
+must take to accomplish the goal. This is sometimes referred to as algorithmic programming. In contrast, 
+a functional approach involves composing the problem as a set of functions to be executed. You define 
+carefully the input to each function, and what each function returns. The following table describes 
+some of the general differences between these two approaches.
+
+
+
+Characteristic              Imperative approach                           Functional approach
+Programmer focus            How to perform tasks (algorithms)             What information is desired and what 
+                            and how to track changes in state.            transformations are required.
+State changes               Important.                                    Non-existent.
+Order of execution          Important.                                    Low importance.
+
+Primary flow control        Loops, conditionals, and                      Function calls, including recursion.
+                            function (method) calls.
+
+
+Primary manipulation        Instances of structures or classes.           Functions as first-class objects 
+unit                                                                      and data collections.
+
+
+
+Transitioning for OOP Developers:
+
+To solve problems, OOP developers design class hierarchies, focus on proper encapsulation, and think in
+terms of class contracts. The behavior and state of object types are paramount, and language features,
+such as classes, interfaces, inheritance, and polymorphism, are provided to address these concerns.
+In contrast, functional programming approaches computational problems as an exercise in the evaluation 
+of pure functional transformations of data collections. Functional programming avoids state and mutable data,
+and instead emphasizes the application of functions.
+
