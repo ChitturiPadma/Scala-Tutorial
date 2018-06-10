@@ -1,0 +1,11 @@
+In object oriented world, it's common to have derived classes to represent the inherited properties. Scala which 
+is both functional and object oriented language also supports principles of OOPs. One of the apprreciated features of 
+Scala is having support for case classes which hold around 22 fields and provide functionality of class without having the 
+need for instantiating the object with 'new' keyword. It provides multiple functionalities -
+- Can do pattern matching
+- toString method is automatically redefined to print the name of the case class and all its arguments,
+- equals method is automatically redefined to compare two instances of the same case class structurally rather than by identity.
+- hashCode method is automatically redefined to use the hashCodes of constructor arguments.
+
+Above all said, one of the missing feature is the support for case class to case class inheritance. It can be achieved by
+defining an abstract class and a case class extending the abstract class
