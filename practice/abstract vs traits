@@ -11,3 +11,6 @@ a feature of having constructor arguements. Two occasions where abstract class c
 1. Create a base class that requires constructor arguments.
 2. The code will be invoked from Java code.
 
+Although Scala has abstract classes, it’s much more common to use traits than abstract classes to implement base behavior. 
+A class can extend only one abstract class, but it can implement multiple traits, so using traits is more flexible.
+
