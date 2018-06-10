@@ -1,0 +1,13 @@
+Abstract classes and interfaces the 2 the common mechanisms inorder to inherit the features of multiple classes. Each 
+one has its importance of using them based on the design of the application and on the need. For someone who has been working 
+on Scala, its quite know fact that we have a construct known as 'trait' which provides the behavior of both abstract class
+adn interface as in Java. 
+
+However, Scala also do have support for abstract class. This leads to a confusion -
+When to use an abstract class vs trait in Scala ?
+
+As we know multiple traits can be extended by a class and members of trait can be partially implemented, but traits do have 
+a feature of having constructor arguements. Two occasions where abstract class can be used -
+1. Create a base class that requires constructor arguments.
+2. The code will be invoked from Java code.
+
