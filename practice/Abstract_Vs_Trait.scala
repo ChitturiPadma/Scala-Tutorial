@@ -1,4 +1,4 @@
-package com.expedia.demos
+package com.scala.demos
 
 trait AccountValue
 {
