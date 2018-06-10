@@ -1,4 +1,4 @@
-package com.expedia.demos
+package com.scala.demos
 
 
 abstract class Person(name: String) {
@@ -6,7 +6,7 @@ abstract class Person(name: String) {
   def printName = println("Person's Name is..."+name)
 }
 
-object SampleApp {
+object Case_Inheritance {
 
   case class Employee (name:String, age:Int) extends Person(name)
   {
