@@ -1,4 +1,4 @@
-package com.expedia.demos
+package com.scala.demos
 
 abstract class Person1(name:String) {
   var age:Int = 0
